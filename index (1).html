@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miguel Soares Flores — Portfólio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue-50: #E6F1FB;
+      --blue-100: #B5D4F4;
+      --blue-400: #378ADD;
+      --blue-600: #185FA5;
+      --blue-800: #0C447C;
+      --text-primary: #1a1a1a;
+      --text-secondary: #555;
+      --text-muted: #888;
+      --bg: #fff;
+      --bg-secondary: #f7f7f5;
+      --border: rgba(0,0,0,0.1);
+      --radius-md: 8px;
+      --radius-lg: 14px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      color: var(--text-primary);
+      background: var(--bg);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 0.5px solid var(--border);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+
+    .nav-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      letter-spacing: 0.3px;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--blue-400); }
+
+    /* HERO */
+    .hero {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 5rem 2rem 3.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--blue-600);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      color: var(--blue-100);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .hero-text .label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--blue-400);
+      margin-bottom: 6px;
+    }
+
+    .hero-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+
+    .hero-text .bio {
+      font-size: 15px;
+      color: var(--text-secondary);
+      max-width: 520px;
+      line-height: 1.75;
+    }
+
+    /* CONTACT BAR */
+    .contact-bar {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 2rem 3rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      animation: fadeUp 0.6s 0.1s ease both;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 12px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      padding: 6px 14px;
+      border: 0.5px solid var(--border);
+      border-radius: 20px;
+      background: var(--bg-secondary);
+      transition: color 0.2s, border-color 0.2s, background 0.2s;
+    }
+
+    .contact-link:hover {
+      color: var(--blue-600);
+      border-color: var(--blue-400);
+      background: var(--blue-50);
+    }
+
+    .contact-link svg {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+    }
+
+    /* DIVIDER */
+    .divider {
+      max-width: 860px;
+      margin: 0 auto 3rem;
+      height: 0.5px;
+      background: var(--border);
+    }
+
+    /* SECTIONS */
+    section {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 2rem 3rem;
+      animation: fadeUp 0.6s 0.15s ease both;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-tag {
+      font-size: 13px;
+      padding: 6px 14px;
+      border: 0.5px solid var(--border);
+      border-radius: 20px;
+      color: var(--text-primary);
+      background: var(--bg-secondary);
+    }
+
+    .skill-tag.highlight {
+      background: var(--blue-50);
+      border-color: var(--blue-100);
+      color: var(--blue-800);
+      font-weight: 700;
+    }
+
+    /* PROJECT CARDS */
+    .project-card {
+      background: var(--bg);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin-bottom: 14px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .project-card:hover {
+      border-color: var(--blue-100);
+      box-shadow: 0 4px 20px rgba(55,138,221,0.08);
+    }
+
+    .project-card:last-child { margin-bottom: 0; }
+
+    .project-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .project-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .project-year {
+      font-size: 11px;
+      color: var(--text-muted);
+      white-space: nowrap;
+      padding-top: 3px;
+      letter-spacing: 0.5px;
+    }
+
+    .project-institution {
+      font-size: 12px;
+      color: var(--blue-400);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .project-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .sub-items {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .sub-items li {
+      font-size: 13px;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .sub-items li::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--blue-400);
+      flex-shrink: 0;
+      margin-top: 8px;
+    }
+
+    .tag-badge {
+      display: inline-block;
+      font-size: 11px;
+      padding: 3px 9px;
+      border-radius: var(--radius-md);
+      background: var(--blue-50);
+      color: var(--blue-600);
+      border: 0.5px solid var(--blue-100);
+      margin-left: 8px;
+      font-family: 'Lato', sans-serif;
+      vertical-align: middle;
+    }
+
+    /* EDUCATION */
+    .edu-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.25rem;
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-lg);
+    }
+
+    .edu-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-md);
+      background: var(--blue-50);
+      border: 0.5px solid var(--blue-100);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--blue-600);
+    }
+
+    .edu-icon svg { width: 20px; height: 20px; }
+
+    .edu-title {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .edu-sub {
+      font-size: 13px;
+      color: var(--blue-400);
+      margin-top: 2px;
+    }
+
+    .edu-year {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 0.5px solid var(--border);
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .footer-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .footer-year {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .hero { flex-direction: column; gap: 1rem; padding-top: 3rem; }
+      .hero-text h1 { font-size: 26px; }
+      nav { padding: 0 1rem; }
+      .nav-links { gap: 1rem; }
+      section, .contact-bar { padding-left: 1rem; padding-right: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-name" href="#">Miguel Flores</a>
+    <ul class="nav-links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#formacao">Formação</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero" id="sobre">
+    <div class="avatar">MS</div>
+    <div class="hero-text">
+      <p class="label">Estudante de Engenharia de Software</p>
+      <h1>Miguel Soares Flores</h1>
+      <p class="bio">Estudante dedicado de Engenharia de Software no CEUB, com interesse genuíno por tecnologia e desenvolvimento de sistemas. Responsável e comprometido com seus objetivos, busca construir uma base sólida na área por meio da prática constante e do aprendizado contínuo.</p>
+    </div>
+  </div>
+
+  <div class="contact-bar">
+    <a class="contact-link" href="mailto:soaresfloresmiguel@gmail.com">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+      soaresfloresmiguel@gmail.com
+    </a>
+    <a class="contact-link" href="https://github.com/miguelsoaresflores" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      GitHub
+    </a>
+    <a class="contact-link" href="https://www.linkedin.com/in/miguel-flores-8aa1b33a0/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      LinkedIn
+    </a>
+  </div>
+
+  <div class="divider"></div>
+
+  <section id="habilidades">
+    <p class="section-label">Habilidades</p>
+    <div class="skills-grid">
+      <span class="skill-tag highlight">Python</span>
+      <span class="skill-tag highlight">Lógica de Programação</span>
+      <span class="skill-tag">Estruturas de Dados</span>
+      <span class="skill-tag">Git</span>
+      <span class="skill-tag">Microsoft Excel</span>
+      <span class="skill-tag">Microsoft Word</span>
+      <span class="skill-tag">PowerPoint</span>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="projetos">
+    <p class="section-label">Projetos</p>
+
+    <div class="project-card">
+      <div class="project-header">
+        <span class="project-title">Programas em Python — Lógica de Programação</span>
+        <span class="project-year">2026</span>
+      </div>
+      <p class="project-institution">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        Disciplina Acadêmica · Engenharia de Software — CEUB
+      </p>
+      <p class="project-desc">Desenvolvimento de programas aplicando condicionais, laços de repetição, listas, dicionários e manipulação de strings em Python.</p>
+      <ul class="sub-items">
+        <li>Sistema de Cantina — controle de pedidos e cálculo de valores com estruturas de dados</li>
+        <li>Decomposição de Cédulas — lógica de troco e operações matemáticas</li>
+        <li>Média do Aluno com Exame — cálculo condicional de médias e resultado final</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header">
+        <span class="project-title">
+          App de Organização Pessoal
+          <span class="tag-badge">Web App</span>
+        </span>
+        <span class="project-year">2025</span>
+      </div>
+      <p class="project-institution">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+        Projeto Pessoal
+      </p>
+      <p class="project-desc">Aplicativo web de organização desenvolvido com auxílio de IA, com funcionalidades de gerenciamento de tarefas e produtividade pessoal.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="formacao">
+    <p class="section-label">Formação</p>
+    <div class="edu-card">
+      <div class="edu-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      </div>
+      <div>
+        <p class="edu-title">Bacharelado em Engenharia de Software</p>
+        <p class="edu-sub">CEUB — Centro Universitário de Brasília</p>
+        <p class="edu-year">Em andamento · 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="footer-name">Miguel Soares Flores</span>
+    <span class="footer-year">© 2026</span>
+  </footer>
+
+</body>
+</html>
