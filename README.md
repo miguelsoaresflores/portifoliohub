@@ -1,76 +1,105 @@
-# portifoliohub 
-Is a professional digital portfolio developed to centralize academic background, technical skills, projects and professional identity in a clean and modern web experience.
-The project was created as part of an academic journey in Software Engineering, combining Git, GitHub and online professional presence development, while also serving as a personal platform for presenting projects, competencies and career goals.
-Overview
-The platform works as a complete personal presentation hub, combining academic information, project showcases, technical skills and professional contact channels inside a visually structured and fully responsive interface.
-The application was designed with focus on:
+# portfolioMSF
 
-Professional presentation
-Clean visual identity
-User experience
-Functional navigation
-Responsive portfolio organization
+O **portfolioMSF** é um portfólio digital profissional desenvolvido para centralizar formação acadêmica, habilidades técnicas, projetos e identidade profissional em uma experiência web moderna e limpa.
 
-Main Features
-Personal Presentation
-The homepage introduces:
+O projeto foi criado como parte da jornada acadêmica em Engenharia de Software, unindo Git, GitHub e desenvolvimento de presença profissional online, servindo também como plataforma pessoal para apresentação de projetos, competências e objetivos de carreira.
 
-Personal identity
-Academic background
-Career positioning
-Contact information
+---
 
-All contact buttons are fully functional and connected to external platforms and communication channels.
-Curriculum Section
-The platform centralizes academic and professional information, including:
+## Visão Geral
 
-Academic formation
-Technical skills
-Tools and software proficiency
-Career trajectory
+A plataforma funciona como um hub completo de apresentação pessoal, reunindo informações acadêmicas, vitrine de projetos, habilidades técnicas e canais de contato profissional em uma interface visualmente estruturada e totalmente responsiva.
 
-Projects Showcase
-portfolioMSF integrates personal and academic projects in a dedicated section, including:
+O projeto foi desenvolvido com foco em:
 
-Python Programming Logic exercises
-Personal Organization App
+- Apresentação profissional
+- Identidade visual limpa
+- Experiência do usuário
+- Navegação funcional
+- Organização responsiva do portfólio
 
-Each project contains:
+---
 
-Description
-Technologies used
-Context and academic reference
+## Funcionalidades
 
-Skills & Competencies
-The website highlights both technical and personal competencies such as:
+### Apresentação Pessoal
 
-Responsibility
-Logical reasoning
-Continuous learning
-Teamwork
-Initiative
+A página inicial apresenta:
 
-Interactive Navigation
-The interface was designed with interactive and responsive navigation, prioritizing:
+- Identidade pessoal
+- Formação acadêmica
+- Posicionamento de carreira
+- Informações de contato
 
-Clean visual hierarchy
-Mobile compatibility
-Smooth browsing experience
-Accessible structure
+Todos os botões de contato são funcionais e conectados a plataformas externas e canais de comunicação.
 
-Technologies
+### Seção de Currículo
 
-HTML
-CSS
-JavaScript
-Responsive Design
-Git
-GitHub
-GitHub Pages
+A plataforma centraliza informações acadêmicas e profissionais, incluindo:
 
-Purpose
-The project was created to consolidate professional online presence while applying concepts related to frontend development, portfolio structuring, Git/GitHub workflows and AI-assisted development practices.
-Live Project
-https://miguelsoaresflores.github.io/portifolio/
-Author
-Developed by Miguel Soares Flores.
+- Formação acadêmica
+- Habilidades técnicas
+- Domínio de ferramentas e softwares
+- Trajetória de carreira
+
+### Vitrine de Projetos
+
+O portfolioMSF integra projetos pessoais e acadêmicos em uma seção dedicada, incluindo:
+
+- Programas em Python — Lógica de Programação
+- App de Organização Pessoal
+
+Cada projeto contém:
+
+- Descrição
+- Tecnologias utilizadas
+- Contexto e referência acadêmica
+
+### Habilidades e Competências
+
+O site destaca competências técnicas e interpessoais como:
+
+- Responsabilidade
+- Raciocínio lógico
+- Aprendizado contínuo
+- Trabalho em equipe
+- Iniciativa
+
+### Navegação Interativa
+
+A interface foi desenvolvida com navegação interativa e responsiva, priorizando:
+
+- Hierarquia visual clara
+- Compatibilidade mobile
+- Experiência de navegação fluida
+- Estrutura acessível
+
+---
+
+## Tecnologias
+
+- HTML
+- CSS
+- JavaScript
+- Design Responsivo
+- Git
+- GitHub
+- GitHub Pages
+
+---
+
+## Objetivo
+
+O projeto foi criado para consolidar a presença profissional online, aplicando conceitos de desenvolvimento frontend, estruturação de portfólio, fluxos Git/GitHub e práticas de desenvolvimento assistido por IA.
+
+---
+
+## Projeto ao Vivo
+
+https://miguelsoaresflores.github.io/portifoliohub/
+
+---
+
+## Autor
+
+Desenvolvido por Miguel Soares Flores.
